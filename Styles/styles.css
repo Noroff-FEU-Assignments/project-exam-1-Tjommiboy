@@ -1,0 +1,431 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+border-box {
+  box-sizing: border-box;
+  width: 1920px;
+  height: 1020px;
+}
+
+body {
+  position: relative;
+
+  background-color: #8cf8f00b;
+  box-sizing: border-box;
+  margin: 0;
+  background-image: url(../Pictures/10876.jpg);
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  border-color: black;
+  padding-bottom: 200px;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.container {
+    top: 0em;
+    display: flex;
+    background-color: #e1f5f2;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+.subcontainer {
+  width: 76em;
+  margin: auto;
+}
+.navbar {
+  width: 100%;
+  min-height: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-menu {
+  margin: -64px;
+  height: 30px;
+  width: 40rem;
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  gap: 2em;
+  justify-content: center;
+}
+.nav-item {
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 2px;
+  justify-content: center;
+  display: flex;
+  padding: 1.5em;
+  align-items: center;
+
+}
+a {
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #00716a;
+}
+
+.logo {
+    width: 340px;
+    height: 146px;
+    color: black;
+    background-color: aqua;
+    z-index: 2;
+    margin-right: auto;
+    object-fit: cover;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 20px;
+  height: 3px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  background-color: rgb(91, 77, 77);
+}
+
+-------------------------------------_-------------------_------------------
+  .carousel {
+  justify-content: center;
+  display: flex;
+  opacity: 100%;
+  top: 330px;
+  position: relative;
+
+}
+
+.latestposts {
+  width: 65%;
+  margin: auto;
+  width: 1200px;
+  height: 166px;
+  background-color: #e1f5f271;
+box-shadow: 3px 3px 5px 1px;
+  top: 240px;
+  position: relative;
+  border-radius: 5px;
+  justify-content: space-between;
+  display: flex;
+}
+.latestcard {
+}
+.keyboards {
+  opacity: 100;
+  height: 161px;
+  width: 382px;
+
+  
+}
+
+/*-------------------------------billboard---------------------------------------------*/
+
+.Billboardcontent {
+
+    width: 65%;
+    margin: auto;
+    width: 1200px;
+    height: 306px;
+    background-color: #e1f5f2c7;
+    box-shadow: 3px 3px 5px 1px;
+    top: 262px;
+    position: relative;
+    border-radius: 5px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+
+.billboardpicture {
+  width: 499px;
+  height: 283px;
+  border-radius: 5px;
+  margin: 20px;
+}
+.welcome {
+    color: #00716a;
+    font-weight: 500;
+
+}
+
+.boardbutton{
+    margin: 58px;
+    width: 200px;
+    height: 58px;
+    background-color:#00716978;
+    border-radius: 5px;
+
+}
+/*---------------------Footer---------------------*/
+
+.footer{
+   
+    display: flex;
+    background-color: #e1f5f2;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+
+    position: fixed;
+    bottom: 0em;
+
+
+}
+.subfooter{
+width: 76.5em;
+
+}
+.someicons{
+  width: 94%;
+  min-height: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.footer_icons{
+  padding: 0px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px ;
+  justify-content: center;
+  display: flex;
+  gap: 1em;
+
+
+}
+
+
+
+
+
+
+/*------------------BOARD PAGE---------------------*/
+
+
+
+.boardscontainer{
+  justify-content: center;
+  display: flex;
+  opacity: 100%;
+  top: 160px;
+  position: relative;
+  margin-bottom: 2em;
+
+}
+
+.boardsposts{
+    width: 65%;
+    margin: auto;
+    height: 276px;
+    background-color: #e1f5f2c7;
+    box-shadow: 3px 3px 5px 1px;
+    top: 0px;
+    position: relative;
+    border-radius: 5px;
+    justify-content: space-between;
+    display: flex;
+
+}
+
+.boardcard{
+    margin: 1em;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 100%) {
+  .header {
+    width: 100%;
+ 
+  }
+}
+
+@media (max-width: 800px) {
+  .hamburger {
+    display: block;
+    margin-left: 54px;
+    
+  }
+
+  .hamburger.active.bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active.bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active.bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+ 
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 132px;
+    gap: 1px;
+    flex-direction: column;
+    background-color: #48b08d00;
+    width: 70%;
+    text-align: center;
+    transition: 0.3s;
+    justify-content: left;
+    z-index: 100;
+   
+  }
+  .nav-item {
+    margin: 0px;
+    background-color: #76ac9a;
+    padding: 10px;
+    border: 1px solid;
+  }
+  .nav-menu.active {
+    right: 0;
+    padding-right: 50px;
+  }
+
+  .logo {
+    width: 197px;
+    height: 84px;
+    color: black;
+    background-color: aqua;
+    z-index: 10;
+    margin-left: 1.3em;
+    top: 0.2em;
+    object-fit: cover;
+    position: relative;
+    margin: 0.5em;
+    left: 0.5em;
+}
+  
+  ---------------------------------------------------------- 
+  .carousel {
+    z-index: 1;
+
+  }
+
+  .latestposts {
+    width: 85%;
+    margin: auto;
+    height: 500px;
+    background-color: #e1f5f271;
+
+    position: relative;
+    border-radius: 5px;
+    justify-content: center;
+    display: block;
+  }
+
+
+  .keyboards {
+    opacity: 100;
+    height: 161px;
+    width: 332px;
+  }
+  /*-------------------------------billboard---------------------------------------------*/
+
+.Billboardcontent {
+
+    width: 85%;
+    margin: auto;
+    height: 606px;
+    background-color: #e1f5f271;
+    box-shadow: 3px 3px 5px 1px;
+    top: 272px;
+    position: relative;
+    border-radius: 5px;
+    justify-content: center;
+    display: block;
+
+
+}
+
+
+.billboardpicture {
+  width: 12em;
+  height: 160px;
+  border-radius: 5px;
+
+}
+
+.boardbutton{
+    margin: 40px;
+    width: 200px;
+    height: 58px;
+    background-color:#00716978;
+
+
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    z-index: 1000;
+  }
+ .welcome {
+    width: 18em;
+    margin: 2em;
+    font-size: 1.0em;
+ }
+ 
+ .boardsposts {
+    width: 65%;
+    margin: auto;
+    height: 886px;
+    background-color: #e1f5f2c7;
+    box-shadow: 3px 3px 5px 1px;
+    top: 0px;
+    position: relative;
+    border-radius: 5px;
+    justify-content: space-between;
+    display: flex;
+}
+
+}
