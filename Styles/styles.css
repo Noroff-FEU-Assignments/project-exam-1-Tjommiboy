@@ -27,13 +27,11 @@ border-box {
 }
 
 
-
-
 body {
   position: relative;
   font-family: 'Poppins',sans-serif;
 
-  background-color: #084743e9;
+  background-color: #e1f5f2;
   box-sizing: border-box;
   margin: 0;
   background-image: url(../Pictures/10876.jpg);
@@ -119,37 +117,84 @@ a {
   background-color: rgb(91, 77, 77);
 }
 
--------------------------------------_-------------------_------------------
-  .carousel {
+/*-------------------------------------_-------------------_------------------*/
+  
+.caruposition{
   justify-content: center;
   display: flex;
-  opacity: 100%;
-  top: 330px;
-  position: relative;
 
 }
 
-.latestposts {
+ .carousel-item {
+  justify-content: center;
+  display: flex;
+  opacity: 100%;
+  top:200px;
+  position: relative;
+  gap: 2em;
+  overflow: hidden;
+  max-width: 1200px;
+
+}
+
+/*.latestpost {
   width: 65%;
   margin: auto;
   width: 1200px;
   height: 166px;
   background-color: #e1f5f271;
-box-shadow: 3px 3px 5px 1px;
+  box-shadow: 3px 3px 5px 1px;
   top: 240px;
   position: relative;
   border-radius: 5px;
   justify-content: space-between;
-  display: flex;
-}
-.latestcard {
-}
-.keyboards {
-  opacity: 100;
-  height: 161px;
-  width: 382px;
+}*/
 
-  
+.btn-wrapper{
+  display: flex;
+  gap: 2 rem;
+  width: 85%;
+  justify-content: center;
+  height: 2em;
+  padding: 2 rem;
+
+}
+.btn-wrapper button{
+  border: 2px solid white;
+  background: transparent;
+  color:white;
+  border-radius: 30px;
+  width: 3rem;
+  cursor: pointer;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.btn-wrapper button:hover {
+  opacity:0.4;
+
+}
+
+.product{
+  background-color: #e1f5f2c7;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px 1px;
+  display: block;
+  justify-content: center;
+}
+.h2{
+  color: #275f4e;
+  left: 20px;
+position: relative;
+
+}
+.img {
+  opacity: 100%;
+  height: 171px;
+  width: 360px;
+
 }
 
 /*-------------------------------billboard---------------------------------------------*/
@@ -162,14 +207,14 @@ box-shadow: 3px 3px 5px 1px;
     height: 306px;
     background-color: #e1f5f2c7;
     box-shadow: 3px 3px 5px 1px;
-    top: 262px;
+    top: 218px;
     position: relative;
     border-radius: 5px;
     justify-content: space-between;
     display: flex;
     align-items: center;
 }
-
+ 
 
 .billboardpicture {
   width: 499px;
@@ -233,7 +278,9 @@ width: 76.5em;
 
 }
 
-
+.minilogo{
+width: 100px;
+}
 
 
 
@@ -340,6 +387,13 @@ width: 76.5em;
     z-index: 100;
    
   }
+.navbar {
+    width: 112%;
+    min-height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   .nav-item {
     margin: 0px;
     background-color: #76ac9a;
@@ -365,34 +419,46 @@ width: 76.5em;
     left: 0.5em;
 }
   
-  ---------------------------------------------------------- 
-  .carousel {
-    z-index: 1;
+ /* ---------------------------------------------------------- */
+  .carousel-item {
 
-  }
-
-  .latestposts {
-    width: 85%;
-    margin: auto;
-    height: 500px;
-    background-color: #e1f5f271;
-
-    position: relative;
-    border-radius: 5px;
-    justify-content: center;
     display: block;
+    opacity: 100%;
+    top:200px;
+    position: relative;
+    gap: 1em;
+    width: 85%;
+  justify-content: center;
+  
   }
-
-
-  .keyboards {
-    opacity: 100;
-    height: 161px;
-    width: 332px;
+  
+  .product{
+    background-color: #e1f5f2c7;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 1px;
+    display: block;
+    justify-content: center;
+    margin: 1em;
+  
+    
   }
+  .h2{
+    color: #275f4e;
+    left: 20px;
+    position: relative;
+    font-size: 16px;
+  
+  }
+  .img {
+    opacity: 100%;
+    height: 141px;
+    width: 260px;
+  
+  }
+  
   /*-------------------------------billboard---------------------------------------------*/
 
-.Billboardcontent {
-
+  .Billboardcontent {
     width: 85%;
     margin: auto;
     height: 606px;
@@ -405,12 +471,13 @@ width: 76.5em;
     display: block;
 
 
+
 }
 
 
 .billboardpicture {
-  width: 12em;
-  height: 160px;
+  width: 18em;
+  height: 174px;
   border-radius: 5px;
 
 }
@@ -431,9 +498,10 @@ header {
     z-index: 1000;
   }
  .welcome {
-    width: 18em;
-    margin: 2em;
-    font-size: 1.0em;
+  width: 18em;
+  margin: 1.5em;
+  font-size: 1.0em;
+}
  }
  
  .boardsposts {
@@ -449,4 +517,17 @@ header {
     display: flex;
 }
 
+
+/*-------------------------------------------------------------------*/
+.someicons {
+  width: 80%;
+  min-height: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+
+
+
+

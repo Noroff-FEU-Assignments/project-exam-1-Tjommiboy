@@ -16,29 +16,31 @@ async function getSynths() {
     for (let i = 0; i < data.length && i < 3; i++) {
       const post = data[i];
 
-      const carouselElement = document.createElement('div');
+      /*const carouselElement = document.createElement('div');
       carouselElement.classList.add('carousel-item'); 
       boardsElement.appendChild(carouselElement);
 
-      const latestpostElement = document.createElement('div');
+      /*const latestpostElement = document.createElement('div');
       latestpostElement.classList.add('latestpost'); 
       carouselElement.appendChild(latestpostElement);
 
       const latestcardElement = document.createElement('div');
       latestcardElement.classList.add('latestcard');
-      latestpostElement.appendChild(latestcardElement);
+      latestpostElement.appendChild(latestcardElement);*/
 
       const productElement = document.createElement('div');
       productElement.classList.add('product');
-      latestcardElement.appendChild(productElement);
+      boardsElement.appendChild(productElement);
 
       const titleElement = document.createElement('h2');
+      titleElement.classList.add('h2')
       titleElement.textContent = post.title.rendered;
       productElement.appendChild(titleElement);
 
       if (post.featured_media) {
-        const imageUrl = post.featured_media.resource_url;
+        const imageUrl = post._embedded['wp:featuredmedia']['0'].source_url;
         const imageElement = document.createElement('img');
+        imageElement.classList.add('img')
         imageElement.src = imageUrl;
         productElement.appendChild(imageElement);
         console.log(post.featured_media);
