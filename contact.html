@@ -19,6 +19,7 @@
     ></script>
   </head>
   <body>
+    <div class="overlay"></div>
     <header>
       <div class="container">
         <div class="subcontainer">
@@ -47,29 +48,48 @@
       </div>
     </header>
     <main>
-      <div class="container">
-        <div class="latestposts">
-          <div class="latestcard"></div>
-          <div class="latestcard"></div>
-          <div class="latestcard"></div>
+      <div class="contact-container">
+        <form class="contact-form" id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required minlength="5"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required minlength="15"><br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required minlength="25"></textarea><br>
+
+            <button class="Submitbtn" type="submit">Submit</button>
+        </form>
+        <div id="error-messages">
+           
         </div>
       </div>
     </main>
     <footer>
-      <div class="footer">
-        <div class="subfooter">
-          <nav class="someicons">
-            <ul class="nav-menu">
-              <li class="icons"><a href="" class=""></a></li>
-              <li class="icons"><a href="" class=""></a></li>
-              <li class="icons"><a href="" class=""></a></li>
-            </ul>
-          </nav>
+        <div class="footer">
+          <div class="subfooter">
+            <nav class="someicons">
+              <a href="index.html">
+                <img class="minilogo" src="Pictures/pngwing.com.png " alt="logo"
+              /></a>
+              <ul class="footer_icons">
+                <a
+                  href="https://web.facebook.com/?_rdc=1&_rdr"
+                  class="fa fa-facebook"
+                ></a>
+                <a href="https://twitter.com" class="fa fa-twitter"></a>
+                <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
     <script src="scripts/hamburger.js"></script>
-
-    <script src="scripts/functions.js"></script>
+    <script src="scripts/contact.js"></script>
+ 
   </body>
 </html>

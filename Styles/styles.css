@@ -40,6 +40,7 @@ body {
   border-color: black;
   padding-bottom: 200px;
 }
+
 header {
   position: fixed;
   top: 0;
@@ -83,7 +84,19 @@ header {
   padding: 2px;
   justify-content: center;
   display: flex;
-  padding: 1.5em;
+  height: 38px;
+  width: 130px;
+  align-items: center;
+
+}
+.nav-item :hover {
+  justify-content: center;
+  display: flex;
+  background-color: #007169c1;  
+  border-radius: 5px;
+  color: aliceblue;
+  height: 38px;
+  width: 130px;
   align-items: center;
 
 }
@@ -91,7 +104,7 @@ a {
   font-size: 24px;
   text-decoration: none;
   font-weight: 500;
-  color: #00716a;
+  color: #007169c6;
 }
 
 .logo {
@@ -116,6 +129,19 @@ a {
   transition: all 0.3s ease;
   background-color: rgb(91, 77, 77);
 }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+  display: none; /* Initially hidden */
+  z-index: 999; /* Place it above other content */
+}
+.overlay.active {
+  display: block;
+}
 
 /*-------------------------------------_-------------------_------------------*/
   
@@ -136,19 +162,11 @@ a {
   max-width: 1200px;
 
 }
+.carousel-item :hover{
+background-color: #b6f7e039;
+   
+}
 
-/*.latestpost {
-  width: 65%;
-  margin: auto;
-  width: 1200px;
-  height: 166px;
-  background-color: #e1f5f271;
-  box-shadow: 3px 3px 5px 1px;
-  top: 240px;
-  position: relative;
-  border-radius: 5px;
-  justify-content: space-between;
-}*/
 
 .btn-wrapper{
   display: flex;
@@ -185,8 +203,10 @@ a {
   justify-content: center;
 }
 .h2{
+  justify-content: center;
+    display: flex;
   color: #275f4e;
-  left: 20px;
+
 position: relative;
 
 }
@@ -229,11 +249,32 @@ position: relative;
 }
 
 .boardbutton{
-    margin: 58px;
-    width: 200px;
-    height: 58px;
-    background-color:#00716978;
-    border-radius: 5px;
+  top: 5em;
+  position: relative;
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 2px;
+  justify-content: center;
+  display: flex;
+  height: 38px;
+  width: 130px;
+  align-items: center;
+  margin: 2em;
+  BORDER:none;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #007169c6;
+}
+.boardbutton:hover {
+  justify-content: center;
+  display: flex;
+  background-color: #007169c1;  
+  border-radius: 5px;
+  color: aliceblue;
+  height: 38px;
+  width: 130px;
+  align-items: center;
 
 }
 /*---------------------Footer---------------------*/
@@ -266,7 +307,7 @@ width: 76.5em;
 
 .footer_icons{
   padding: 0px;
-  font-size: 30px;
+  font-size: 32px;
   width: 50px;
   text-align: center;
   text-decoration: none;
@@ -274,9 +315,9 @@ width: 76.5em;
   justify-content: center;
   display: flex;
   gap: 1em;
-
-
 }
+
+
 
 .minilogo{
 width: 100px;
@@ -287,50 +328,113 @@ width: 100px;
 
 /*------------------BOARD PAGE---------------------*/
 
-
-
-.boardscontainer{
+.boardcentered {
+  top: 30px;
   justify-content: center;
   display: flex;
-  opacity: 100%;
-  top: 160px;
   position: relative;
-  margin-bottom: 2em;
-
 }
 
-.boardsposts{
-    width: 65%;
-    margin: auto;
-    height: 276px;
-    background-color: #e1f5f2c7;
-    box-shadow: 3px 3px 5px 1px;
-    top: 0px;
-    position: relative;
-    border-radius: 5px;
-    justify-content: space-between;
-    display: flex;
-
+.boardscontainer {
+  opacity: 100%;
+  top: 150px;
+  position: relative;
+  gap: 2em;
+  max-width: 1540px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 1em;
 }
+
+.boardsposts {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  margin: auto;
+height: 178px;
+  background-color: #e1f5f2c7;
+  box-shadow: 3px 3px 5px 1px;
+  top: 0px;
+  position: relative;
+  border-radius: 5px;
+  justify-content: space-between;
+  display: block;
+}
+.boardscontainer :hover{
+  background-color: #b6f7e039;
+} 
 
 .boardcard{
     margin: 1em;
     font-size: 1.2em;
-    font-weight: 400;
+    font-weight: 500;
+    justify-content: center;
+    display: flex;
+}
+.img{
+ 
+  opacity: 100%;
+    height: 119px;
+    width: 288px;
 }
 
 
 
+/*-----------------------Contact------------------------*/
+
+.contact-container{
+ top: 20em;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  width: 1200px;
+  height: 306px;
+  background-color: #e1f5f2c7;
+  box-shadow: 3px 3px 5px 1px;
+  top: 218px;
+  position: relative;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-form{
+  display: block;
+
+  
+}
+.contact-form #name #email #subject #message{
+margin: 2em;
+  
+}
+#name{
+  left:60px;
+  position: relative;
+}
+#email{
+  left: 62px;
+  position: relative;
+}
+
+#subject{
+  left:49px;
+  position: relative;
+}
 
 
+#message{
+  left:24px;
+  position: relative;
+}
 
 
-
-
-
-
-
-
+.Submitbtn{
+  left:16em;
+  position: relative;
+  top:5em;
+}
 
 
 
@@ -376,11 +480,11 @@ width: 100px;
   .nav-menu {
     position: fixed;
     right: -100%;
-    top: 132px;
+    top: 200px;
     gap: 1px;
     flex-direction: column;
     background-color: #48b08d00;
-    width: 70%;
+    width: 50%;
     text-align: center;
     transition: 0.3s;
     justify-content: left;
@@ -399,11 +503,11 @@ width: 100px;
     background-color: #76ac9a;
     padding: 10px;
     border: 1px solid;
+    width: 164px;
   }
   .nav-menu.active {
-    right: 0;
-    padding-right: 50px;
-  }
+    right: 56px;
+}
 
   .logo {
     width: 197px;
@@ -444,7 +548,7 @@ width: 100px;
   }
   .h2{
     color: #275f4e;
-    left: 20px;
+  
     position: relative;
     font-size: 16px;
   
@@ -462,7 +566,7 @@ width: 100px;
     width: 85%;
     margin: auto;
     height: 606px;
-    background-color: #e1f5f271;
+    background-color: e1f5f2c7;
     box-shadow: 3px 3px 5px 1px;
     top: 272px;
     position: relative;
@@ -473,8 +577,10 @@ width: 100px;
 
 
 }
-
-
+.h2{
+  justify-content: center;
+  display: flex;
+}
 .billboardpicture {
   width: 18em;
   height: 174px;
@@ -502,28 +608,127 @@ header {
   margin: 1.5em;
   font-size: 1.0em;
 }
+/*--------------------------------------------------------*/
+.boardcentered {
+  top: -61px;
+  justify-content: center;
+  display: flex;
+  position: relative;
+
+}
+
+.boardscontainer{
+  justify-content: center;
+  display: block;
+  opacity: 100%;
+  top:200px;
+  position: relative;
+  gap: 2em;
+  max-width: 1200px;
+  margin-bottom: 1em;
+
+
+   
+
+}
+
+.boardsposts {
+
+  width: 100%;
+  margin: auto;
+  height: 184px;
+  background-color: #e1f5f2c7;
+  box-shadow: 3px 3px 5px 1px;
+  top: 0px;
+  position: relative;
+  border-radius: 5px;
+  justify-content: center;
+  display: block;
+
+
+ 
+ 
+
+}
+
+.boardcard{
+    margin: 1em;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+/*---------------------contact------------------------------*/
+.contact-container{
+  top: 20em;
+   position: relative;
+   justify-content: center;
+   display: flex;
+   margin: auto;
+   width: 80%;
+   height: 386px;
+   background-color: #e1f5f2c7;
+   box-shadow: 3px 3px 5px 1px;
+   top: 218px;
+   position: relative;
+   border-radius: 5px;
+   display: flex;
+   align-items: center;
  }
  
- .boardsposts {
-    width: 65%;
-    margin: auto;
-    height: 886px;
-    background-color: #e1f5f2c7;
-    box-shadow: 3px 3px 5px 1px;
-    top: 0px;
-    position: relative;
-    border-radius: 5px;
-    justify-content: space-between;
-    display: flex;
+ .contact-form{
+   display: block;
+ 
+   
+ }
+
+ #name{
+   left:60px;
+   position: relative;
+ }
+ #email{
+   left:px;
+   position: relative;
+ }
+ 
+ #subject{
+   left:49px;
+   position: relative;
+ }
+
+
+
+ #message{
+  left: 24px;
+  position: relative;
+  top: 3em;
+  width: 66%;
+  height: 10em;
+
 }
+
+
+.Submitbtn{
+  left:16em;
+  position: relative;
+  top:5em;
+}
+
+/*-----------------------FOOTER----------------------*/
+.minilogo{
+  display: none;
+}
+
+}
+ 
+
 
 
 /*-------------------------------------------------------------------*/
 .someicons {
-  width: 80%;
+  width: 95%;
   min-height: 4px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
