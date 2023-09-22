@@ -16,17 +16,6 @@ async function getSynths() {
     for (let i = 0; i < data.length && i < 8; i++) {
       const post = data[i];
 
-      /*const carouselElement = document.createElement('div');
-      carouselElement.classList.add('carousel-item'); 
-      boardsElement.appendChild(carouselElement);
-
-      /*const latestpostElement = document.createElement('div');
-      latestpostElement.classList.add('latestpost'); 
-      carouselElement.appendChild(latestpostElement);
-
-      const latestcardElement = document.createElement('div');
-      latestcardElement.classList.add('latestcard');
-      latestpostElement.appendChild(latestcardElement);*/
 
       const productElement = document.createElement('div');
       productElement.classList.add('boardsposts');
@@ -40,7 +29,7 @@ async function getSynths() {
       if (post.featured_media) {
         const imageUrl = post._embedded['wp:featuredmedia']['0'].source_url;
         const imageElement = document.createElement('img');
-        imageElement.classList.add('img')
+        imageElement.classList.add('imgboards')
         imageElement.src = imageUrl;
         productElement.appendChild(imageElement);
         console.log(post.featured_media);

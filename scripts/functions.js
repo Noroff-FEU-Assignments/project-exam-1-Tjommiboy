@@ -1,5 +1,5 @@
 const api_url = 'https://www.fjord1design.com/pe1/wp-json/wp/v2/posts?_embed';
-const boardsElement = document.querySelector('.carousel-item');
+const boardsElement = document.querySelector('.carousel');
 
 async function getSynths() {
 
@@ -16,17 +16,6 @@ async function getSynths() {
     for (let i = 0; i < data.length && i < 3; i++) {
       const post = data[i];
 
-      /*const carouselElement = document.createElement('div');
-      carouselElement.classList.add('carousel-item'); 
-      boardsElement.appendChild(carouselElement);
-
-      /*const latestpostElement = document.createElement('div');
-      latestpostElement.classList.add('latestpost'); 
-      carouselElement.appendChild(latestpostElement);
-
-      const latestcardElement = document.createElement('div');
-      latestcardElement.classList.add('latestcard');
-      latestpostElement.appendChild(latestcardElement);*/
 
       const productElement = document.createElement('div');
       productElement.classList.add('product');

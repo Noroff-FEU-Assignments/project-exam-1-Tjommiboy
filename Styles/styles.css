@@ -92,7 +92,7 @@ header {
 .nav-item :hover {
   justify-content: center;
   display: flex;
-  background-color: #007169c1;  
+  background-color: #5A5D9D;  
   border-radius: 5px;
   color: aliceblue;
   height: 38px;
@@ -104,7 +104,7 @@ a {
   font-size: 24px;
   text-decoration: none;
   font-weight: 500;
-  color: #007169c6;
+  color: #5A5D9D;
 }
 
 .logo {
@@ -143,15 +143,15 @@ a {
   display: block;
 }
 
-/*-------------------------------------_-------------------_------------------*/
+/*-------------------------------------Carousel------------------------------------*/
   
-.caruposition{
+.wrapper{
   justify-content: center;
   display: flex;
 
 }
 
- .carousel-item {
+ .carousel {
   justify-content: center;
   display: flex;
   opacity: 100%;
@@ -160,22 +160,31 @@ a {
   gap: 2em;
   overflow: hidden;
   max-width: 1200px;
+}
+.product{
+  background-color: #e1f5f2c7;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px 1px;
+  display: block;
+  justify-content: center;
+}
 
-}
-.carousel-item :hover{
+/*.carousel-item :hover{
 background-color: #b6f7e039;
+
    
-}
+}*/
 
 
 .btn-wrapper{
   display: flex;
   gap: 2 rem;
   width: 85%;
-  justify-content: center;
+  justify-content: space-between;
   height: 2em;
   padding: 2 rem;
-
+  position: fixed;
+z-index: 100;
 }
 .btn-wrapper button{
   border: 2px solid white;
@@ -195,21 +204,16 @@ background-color: #b6f7e039;
 
 }
 
-.product{
-  background-color: #e1f5f2c7;
-  border-radius: 5px;
-  box-shadow: 3px 3px 5px 1px;
-  display: block;
-  justify-content: center;
-}
+
 .h2{
   justify-content: center;
-    display: flex;
-  color: #275f4e;
-
-position: relative;
-
+  display: flex;
+  color:  #5A5D9D;
+  font-size: 1.2em;
+  font-weight: 500;
+  position: relative;
 }
+
 .img {
   opacity: 100%;
   height: 171px;
@@ -264,12 +268,12 @@ position: relative;
   font-size: 24px;
   text-decoration: none;
   font-weight: 500;
-  color: #007169c6;
+  color:  #5A5D9D;
 }
 .boardbutton:hover {
   justify-content: center;
   display: flex;
-  background-color: #007169c1;  
+  background-color:  #5A5D9D;  
   border-radius: 5px;
   color: aliceblue;
   height: 38px;
@@ -348,21 +352,19 @@ width: 100px;
 }
 
 .boardsposts {
-  justify-content: center;
-  display: flex;
+ 
   width: 100%;
   margin: auto;
-height: 178px;
+  height: 178px;
   background-color: #e1f5f2c7;
   box-shadow: 3px 3px 5px 1px;
   top: 0px;
   position: relative;
   border-radius: 5px;
-  justify-content: space-between;
   display: block;
 }
 .boardscontainer :hover{
-  background-color: #b6f7e039;
+  background-color: #b6f7e095;
 } 
 
 .boardcard{
@@ -371,12 +373,14 @@ height: 178px;
     font-weight: 500;
     justify-content: center;
     display: flex;
+    color:  #5A5D9D;
 }
-.img{
- 
+.imgboards{
+  justify-content: center;
+  display: flex;
   opacity: 100%;
-    height: 119px;
-    width: 288px;
+  height: 112px;
+  width: 265px;
 }
 
 
@@ -547,7 +551,7 @@ margin: 2em;
     
   }
   .h2{
-    color: #275f4e;
+    color: #5A5D9D;
   
     position: relative;
     font-size: 16px;
