@@ -7,7 +7,7 @@ import {showLoader,hideLoader} from "./loader/loader.js"
 handleHamburger();
 
 async function displayPosts() {
-  const boardsElement = document.querySelector("carousel");
+  const boardsElement = document.querySelector(".carousel");
 
   try {
     showLoader ();

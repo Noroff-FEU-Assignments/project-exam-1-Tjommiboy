@@ -1,4 +1,4 @@
-export default function renderPosts (posts, mainParent) { 
+export default function renderPosts (posts, boardsElement) { 
     
     let parent;
    
@@ -7,7 +7,7 @@ export default function renderPosts (posts, mainParent) {
      if (i % 3 === 0){
         parent = document.createElement("div");
         parent.classList.add("posts-parent");
-        mainParent.appendChild(parent);
+        boardsElement.appendChild(parent);
      }       
 
      const post = posts[i];
