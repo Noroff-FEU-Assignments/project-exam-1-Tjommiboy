@@ -21,9 +21,9 @@ export default function renderPosts (posts, boardsElement) {
      postElement.appendChild(titleElement);
 
     if (post.featured_media && post._embedded && post._embedded["wp:featuredmedia"] && post._embedded) {
-        const imageUrl = post._embedded['wp:featuredmedia']['0'].source_url;
-        const imageElement = document.createElement('img');
-        imageElement.classList.add('img')
+        const imageUrl = post._embedded["wp:featuredmedia"]["0"].source_url;
+        const imageElement = document.createElement("img");
+        imageElement.classList.add("img")
         imageElement.src = imageUrl;
         postElement.appendChild(imageElement);
         console.log(post.featured_media);

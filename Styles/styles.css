@@ -378,8 +378,11 @@ background-color: #b6f7e039;
   opacity: 100%;
   height: 112px;
   width: 265px;
+ cursor: pointer; 
 }
-
+.imgboards :hover {
+transform:scale(1.2)
+}
 /*-----------------------Contact------------------------*/
 .h1 {
   text-align: center;
@@ -614,6 +617,13 @@ width: 15em;
     width: 85%;
     justify-content: center;
   }
+  .posts-parent {
+    display: flex;
+    background-color: var(--container-color);
+    border-radius: 5px;
+    gap: 1em;
+    display: block;
+}
 
   .product {
     background-color:var(--container-color);
@@ -657,10 +667,11 @@ width: 15em;
     width: 18em;
     height: 174px;
     border-radius: 5px;
+    margin: auto;
   }
 
   .boardbutton {
-    margin: 40px;
+    margin: auto;
     width: 200px;
     height: 58px;
     background-color: #00716978;
