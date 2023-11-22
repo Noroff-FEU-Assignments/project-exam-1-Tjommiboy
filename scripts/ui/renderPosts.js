@@ -15,10 +15,7 @@ export default function renderPosts (posts, boardsElement) {
      postElement.classList.add("post");
      parent.appendChild(postElement);
 
-     const titleElement = document.createElement("h2");
-     titleElement.classList.add("h2")
-     titleElement.textContent = post.title.rendered;
-     postElement.appendChild(titleElement);
+
 
     if (post.featured_media && post._embedded && post._embedded["wp:featuredmedia"] && post._embedded) {
         const imageUrl = post._embedded["wp:featuredmedia"]["0"].source_url;
@@ -27,6 +24,10 @@ export default function renderPosts (posts, boardsElement) {
         imageElement.src = imageUrl;
         postElement.appendChild(imageElement);
         console.log(post.featured_media);
+        const titleElement = document.createElement("h2");
+     titleElement.classList.add("h2")
+     titleElement.textContent = post.title.rendered;
+     postElement.appendChild(titleElement);
       }
 
     }

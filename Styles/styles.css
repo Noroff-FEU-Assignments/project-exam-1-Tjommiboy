@@ -16,11 +16,11 @@ border-box {
 }
 
 .loader {
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid darkred;
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid darkred;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 60px;
+  height: 60px;
   animation: spin 2s linear infinite;
 }
 @keyframes spin {
@@ -350,14 +350,14 @@ background-color: #b6f7e039;
 .boardsposts {
   width: 100%;
   margin: auto;
-  height: 178px;
+  height: 236px;
   background-color: var(--container-color);
   box-shadow: 3px 3px 5px 1px;
   top: 0px;
   position: relative;
   border-radius: 5px;
   display: grid;
-  grid-template-rows: 30%;
+  grid-template-rows:50%;
   justify-content: center;
 }
 .boardscontainer :hover {
@@ -365,7 +365,7 @@ background-color: #b6f7e039;
 }
 
 .boardcard {
-  margin: 1em;
+  margin: 20px;
   font-size: 1.2em;
   font-weight: 500;
   justify-content: center;
@@ -378,11 +378,47 @@ background-color: #b6f7e039;
   opacity: 100%;
   height: 112px;
   width: 265px;
- cursor: pointer; 
+  cursor: pointer;
+  margin: 26px;
 }
 .imgboards :hover {
 transform:scale(1.2)
 }
+
+/*--------------------Boardspecific--------------------*/
+
+.keyboard_id{
+  top: 200px;
+  background-color: var(--container-color);
+  position: relative;
+  width: min(85%,1440px);
+  justify-content: center;
+  display: flex;
+  box-shadow: 3px 3px 5px 1px;
+  border-radius: 5px;
+
+}
+.boardcardspesific{
+  margin: 1em;
+  font-size: 2.2em;
+  font-weight: 500;
+  justify-content: center;
+  display: flex;
+  color:var(--font-color);
+  PADDING: 20PX;
+}
+
+.specificposts{
+  padding:20px
+}
+
+.carddivided{
+  grid-template-columns: 50% 50%;
+  display: grid;
+  top: 5em;
+  position: relative;
+}
+
 /*-----------------------Contact------------------------*/
 .h1 {
   text-align: center;
