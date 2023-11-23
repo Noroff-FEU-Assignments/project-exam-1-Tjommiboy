@@ -179,9 +179,9 @@ a {
 
 .posts-parent {
   display: flex;
+  gap: 2.2em;
   background-color: var(--container-color);
   border-radius: 5px;
-  gap: 1em;
 }
 
 .btn-wrapper {

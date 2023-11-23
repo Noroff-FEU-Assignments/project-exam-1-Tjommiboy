@@ -11,22 +11,29 @@ export default function renderPosts(posts, boardsElement) {
     const post = posts[i];
     const postElement = document.createElement("div");
     postElement.classList.add("post");
-    parent.appendChild(postElement);
+
+    const anchorElement = document.createElement("a");
+    anchorElement.classList.add("specificcard");
+    anchorElement.href = `productspecific.html?id=${post.id}`;
+
+    parent.appendChild(anchorElement);
+
+    anchorElement.appendChild(postElement);
 
     if (
       post.featured_media &&
       post._embedded &&
       post._embedded["wp:featuredmedia"] &&
-      post._embedded
+      post._embedded["wp:featuredmedia"][0]
     ) {
-      const imageUrl = post._embedded["wp:featuredmedia"]["0"].source_url;
+      const imageUrl = post._embedded["wp:featuredmedia"][0].source_url;
       const imageElement = document.createElement("img");
-      imageElement.classList.add("img");
+      imageElement.classList.add("imgboards");
       imageElement.src = imageUrl;
       postElement.appendChild(imageElement);
-      console.log(post.featured_media);
+
       const titleElement = document.createElement("h2");
-      titleElement.classList.add("h2");
+      titleElement.classList.add("boardcard");
       titleElement.textContent = post.title.rendered;
       postElement.appendChild(titleElement);
     }

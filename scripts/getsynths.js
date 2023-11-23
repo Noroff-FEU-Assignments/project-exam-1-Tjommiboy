@@ -15,8 +15,7 @@ export default async function getSynths() {
         boardsElement.innerHTML += `
         <a class"specificcard" href="productspecific.html?id=${synths[i].id}">
           <div class="boardsposts">
-        
-              <img class="imgboards" src="${synths[i]._embedded["wp:featuredmedia"][0].source_url}" />
+            <img class="imgboards" src="${synths[i]._embedded["wp:featuredmedia"][0].source_url}" />
               <h2 class="boardcard">${synths[i].title.rendered}</h2>
            
           </div>
