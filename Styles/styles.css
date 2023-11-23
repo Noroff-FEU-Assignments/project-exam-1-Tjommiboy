@@ -390,7 +390,6 @@ a {
 /*--------------------Boardspecific--------------------*/
 
 .keyboard_id {
-  top: 200px;
   background-color: var(--container-color);
   position: relative;
   width: min(85%, 1440px);
@@ -399,8 +398,13 @@ a {
   box-shadow: 3px 3px 5px 1px;
   border-radius: 5px;
 }
+.boardcenteredspecific {
+  top: 150px;
+  justify-content: center;
+  display: flex;
+  position: relative;
+}
 .boardcardspesific {
-  margin: 1em;
   font-size: 2.2em;
   font-weight: 500;
   justify-content: center;
@@ -408,9 +412,9 @@ a {
   color: var(--font-color);
   padding: 20px;
 }
-
 .specificposts {
-  padding: 20px;
+  justify-content: center;
+  display: block;
 }
 
 .carddivided {
@@ -418,6 +422,22 @@ a {
   display: grid;
   top: 5em;
   position: relative;
+  padding: 20px;
+  top: -4px;
+}
+
+.imgboard {
+  justify-content: center;
+  display: flex;
+  opacity: 100%;
+  height: 212px;
+  width: 445px;
+  cursor: pointer;
+  margin: 26px;
+  gap: 10px;
+}
+.detail__title {
+  padding: 20px;
 }
 
 /*-----------------------Contact------------------------*/

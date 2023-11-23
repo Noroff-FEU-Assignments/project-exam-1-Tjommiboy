@@ -9,13 +9,12 @@ const id = params.get("id");
 console.log(id);
 
 const url =
-  "https://www.fjord1design.com/pe1/wp-json/wp/v2/posts/" + id + "?embed";
+  "https://www.fjord1design.com/pe1/wp-json/wp/v2/posts/" + id + "?_embed";
 
 async function getproduct() {
   try {
     const response = await fetch(url);
     const board = await response.json();
-    console.log(board);
 
     product_container.innerHTML = "";
     createHtml(board);
@@ -28,21 +27,25 @@ async function getproduct() {
 getproduct();
 
 function createHtml(details) {
+  console.log(details);
   product_container.innerHTML += `
-           <div class="product_card">
+
              <div class="specificposts">
                    <h2 class="boardcardspesific">${details.title.rendered}</h2>
-                   <img class="imgboards" src="${details._links._embed["wp:featuredmedia"]?.[0].source_url}">
+                  
                <div class="carddivided">
                   <div>
-                    <p class="detail__title">${details.content.rendered}</P>
+                  <img class="imgboard" src="${details._embedded["wp:featuredmedia"]?.[0].source_url}">
                   </div>
                   <div>
-                    <p class="detail__title">${details.excerpt.rendered}</P>
+                       <p>${details.excerpt.rendered}</P>
                   </div>
+                 
                </div>
-        
+                <div class="detail__title">
+               <p>${details.content.rendered}</P>
+               </div>
              </div>
-          </div>
+
           `;
 }
