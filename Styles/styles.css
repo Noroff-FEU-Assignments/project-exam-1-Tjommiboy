@@ -3,6 +3,16 @@
   --font-color: #5a5d9d;
   --container-color: #e1f5f2c7;
 }
+:root {
+  --step--2: clamp(0.5206rem, 0.419rem + 0.508vw, 0.8rem);
+  --step--1: clamp(0.625rem, 0.4886rem + 0.6818vw, 1rem);
+  --step-0: clamp(0.75rem, 0.5682rem + 0.9091vw, 1.25rem);
+  --step-1: clamp(0.9rem, 0.6591rem + 1.2045vw, 1.5625rem);
+  --step-2: clamp(1.08rem, 0.7625rem + 1.5875vw, 1.9531rem);
+  --step-3: clamp(1.2963rem, 0.8799rem + 2.0818vw, 2.4413rem);
+  --step-4: clamp(1.555rem, 1.0107rem + 2.7216vw, 3.0519rem);
+  --step-5: clamp(1.8663rem, 1.1576rem + 3.5432vw, 3.815rem);
+}
 
 * {
   padding: 0;
@@ -107,7 +117,7 @@ header {
   color: var(--font-color);
 }
 a {
-  font-size: 24px;
+  font-size: 22px;
   text-decoration: none;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.68);
@@ -160,7 +170,7 @@ a {
   justify-content: center;
   display: flex;
   opacity: 100%;
-  top: 200px;
+  top: 15.5em;
   position: relative;
   gap: 2em;
   overflow: hidden;
@@ -182,6 +192,9 @@ a {
   gap: 2.2em;
   background-color: var(--container-color);
   border-radius: 5px;
+  box-shadow: 3px 3px 5px 1px;
+  left: 175px;
+  position: inherit;
 }
 
 .btn-wrapper {
@@ -240,15 +253,14 @@ a {
   justify-content: center;
   display: grid;
   align-items: center;
-  grid-template-columns: 40% 40%;
-  gap: 5%;
+  grid-template-columns: 50% 50%;
 }
 
 .billboardpicture {
-  width: 529px;
+  width: 97%;
   height: 283px;
   border-radius: 5px;
-  margin: -34px;
+  margin: 18px;
 }
 .welcomenote {
   display: block;
@@ -256,13 +268,14 @@ a {
 .welcome {
   color: var(--font-color);
   font-weight: 500;
-  width: 100%;
-  font-size: 1.1em;
+  width: 90%;
+  font-size: var(--step--1);
+  padding: 20px;
 }
 
 .boardbutton {
-  left: 16.5em;
-  top: 1.4em;
+  left: 0em;
+  top: 2.2em;
   position: relative;
   background-color: aliceblue;
   border-radius: 5px;
@@ -386,7 +399,44 @@ a {
 .imgboards :hover {
   transform: scale(1.2);
 }
+.loadMore {
+  right: 10em;
+  top: 32.2em;
+  position: relative;
+  border-radius: 5px;
+  padding: 2px;
+  justify-content: center;
+  display: flex;
+  height: 38px;
+  width: 130px;
+  align-items: center;
+  margin: 0em;
+  border: none;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: 500;
+  background-color: aliceblue;
+  color: var(--font-color); /* Set default font color */
+  transition: background-color 0.3s, color 0.3s; /* Add smooth transition */
+}
 
+.loadMore:hover {
+  background-color: var(--font-color);
+  color: aliceblue;
+  animation: pulsate 2s infinite; /* Adjust the duration as needed */
+}
+
+@keyframes pulsate {
+  0%,
+  100% {
+    background-color: aliceblue;
+    color: var(--font-color);
+  }
+  50% {
+    background-color: var(--font-color);
+    color: aliceblue;
+  }
+}
 /*--------------------Boardspecific--------------------*/
 
 .keyboard_id {
@@ -397,6 +447,7 @@ a {
   display: flex;
   box-shadow: 3px 3px 5px 1px;
   border-radius: 5px;
+  top: 200px;
 }
 .boardcenteredspecific {
   top: 150px;
@@ -430,14 +481,19 @@ a {
   justify-content: center;
   display: flex;
   opacity: 100%;
-  height: 212px;
-  width: 445px;
+  height: 100%;
+  width: 100%;
   cursor: pointer;
-  margin: 26px;
-  gap: 10px;
+  margin: 0px;
+  position: relative;
+}
+.boardspecification {
+  padding: 20px;
+  font-size: var(--step--1);
 }
 .detail__title {
   padding: 20px;
+  font-size: var(--step-0);
 }
 
 /*-----------------------Contact------------------------*/
@@ -586,6 +642,59 @@ input[type="text"] {
   }
 }
 
+@media (max-width: 1200px) {
+  .boardscontainer {
+    opacity: 100%;
+    top: 200px;
+    position: relative;
+    gap: 2em;
+    max-width: 1540px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 1em;
+  }
+  .boardbutton {
+    top: 1.4em;
+    position: relative;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 2px;
+    justify-content: center;
+    display: flex;
+    height: 38px;
+    width: 130px;
+    align-items: center;
+    margin: 0em;
+    border: none;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--font-color);
+  }
+  .Billboardcontent {
+    width: 65%;
+    margin: auto;
+    width: 90%;
+    height: 318px;
+    background-color: var(--container-color);
+    box-shadow: 3px 3px 5px 1px;
+    top: 220px;
+    position: relative;
+    border-radius: 5px;
+    justify-content: center;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 50% 50%;
+  }
+  .billboardpicture {
+    width: 97%;
+    height: 282px;
+    border-radius: 5px;
+    margin: 18px;
+  }
+}
+
 @media (max-width: 800px) {
   .hamburger {
     display: block;
@@ -693,7 +802,7 @@ input[type="text"] {
     height: 606px;
     background-color: var(--container-color);
     box-shadow: 3px 3px 5px 1px;
-    top: 272px;
+    top: 140px;
     position: relative;
     border-radius: 5px;
     justify-content: center;
@@ -704,10 +813,9 @@ input[type="text"] {
     display: flex;
   }
   .billboardpicture {
-    width: 18em;
-    height: 174px;
+    width: 94%;
+    height: 270px;
     border-radius: 5px;
-    margin: auto;
   }
 
   .boardbutton {
@@ -729,6 +837,7 @@ input[type="text"] {
     color: var(--font-color);
     font-weight: 500;
   }
+
   /*--------------------------------------------------------*/
   .boardcentered {
     top: -61px;
@@ -765,6 +874,60 @@ input[type="text"] {
     margin: 1em;
     font-size: 1.2em;
     font-weight: 400;
+  }
+
+  /*--------------------Boardspecific--------------------*/
+
+  .keyboard_id {
+    background-color: var(--container-color);
+    position: relative;
+    width: min(85%, 1440px);
+    justify-content: center;
+    display: flex;
+    box-shadow: 3px 3px 5px 1px;
+    border-radius: 5px;
+    top: 200px;
+  }
+  .boardcenteredspecific {
+    top: 150px;
+    justify-content: center;
+    display: flex;
+    position: relative;
+  }
+  .boardcardspesific {
+    font-size: 2.2em;
+    font-weight: 500;
+    justify-content: center;
+    display: flex;
+    color: var(--font-color);
+    padding: 20px;
+  }
+  .specificposts {
+    justify-content: center;
+    display: block;
+  }
+
+  .carddivided {
+    grid-template-columns: 50% 50%;
+    display: block;
+    top: 5em;
+    position: relative;
+    padding: 20px;
+    top: -4px;
+  }
+
+  .imgboard {
+    justify-content: center;
+    display: flex;
+    opacity: 100%;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    margin: 0px;
+    position: relative;
+  }
+  .detail__title {
+    padding: 20px;
   }
 
   /*---------------------contact------------------------------*/
@@ -888,6 +1051,20 @@ input[type="text"] {
     justify-content: center;
     align-items: center;
   }
+  @media (max-width: 393px) {
+    .billboardpicture {
+      width: 100%;
+      height: 270px;
+      border-radius: 5px;
+    }
+  }
 }
-
+@media (max-width: 393px) {
+  .billboardpicture {
+    width: 100%;
+    height: 270px;
+    border-radius: 5px;
+    margin: 0px;
+  }
+}
 /*-----------------------FOOTER----------------------*/

@@ -19,6 +19,7 @@ export default async function getSynths() {
               <h2 class="boardcard">${synths[i].title.rendered}</h2>
            
           </div>
+ 
           </a>`;
       }
     }

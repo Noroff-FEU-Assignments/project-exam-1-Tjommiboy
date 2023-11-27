@@ -1,3 +1,4 @@
+import handleHamburger from "./hamburger.js";
 const product_container = document.querySelector(".keyboard_id");
 
 const queryString = document.location.search;
@@ -10,6 +11,8 @@ console.log(id);
 
 const url =
   "https://www.fjord1design.com/pe1/wp-json/wp/v2/posts/" + id + "?_embed";
+
+handleHamburger();
 
 async function getproduct() {
   try {
@@ -37,7 +40,7 @@ function createHtml(details) {
                   <div>
                   <img class="imgboard" src="${details._embedded["wp:featuredmedia"]?.[0].source_url}">
                   </div>
-                  <div>
+                  <div class=boardspecification>
                        <p>${details.excerpt.rendered}</P>
                   </div>
                  
@@ -46,6 +49,6 @@ function createHtml(details) {
                <p>${details.content.rendered}</P>
                </div>
              </div>
-
+             <button class="loadMore">Load More</button></a>
           `;
 }
