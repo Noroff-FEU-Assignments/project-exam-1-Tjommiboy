@@ -367,7 +367,7 @@ a {
 /*------------------BOARD PAGE---------------------*/
 
 .boardcentered {
-  top: 184px;
+  top: 150px;
   justify-content: center;
   display: flex;
   position: relative;
@@ -375,7 +375,7 @@ a {
 
 .boardscontainer {
   opacity: 100%;
-  top: 0px;
+  top: 2em;
   position: relative;
   gap: 2em;
   max-width: 1540px;
@@ -473,7 +473,6 @@ a {
   display: flex;
   box-shadow: 3px 3px 5px 1px;
   border-radius: 5px;
-  top: 200px;
 }
 .boardcenteredspecific {
   top: 150px;
@@ -520,6 +519,52 @@ a {
 .detail__title {
   padding: 20px;
   font-size: var(--step-0);
+}
+/*-----------------------MODAL-------------------------*/
+#image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.image-thumbnail {
+  object-fit: cover;
+  margin: px;
+  cursor: pointer;
+}
+
+#imageModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+#modal-content {
+  max-width: 140%;
+  max-height: 140%;
+}
+
+#modal-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: rgb(210, 5, 5);
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 999;
 }
 
 /*-----------------------Contact------------------------*/
