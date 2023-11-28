@@ -26,6 +26,4 @@ export default async function getSynths() {
   } catch (error) {
     console.log(error);
   }
-
-  hideLoader();
 }
